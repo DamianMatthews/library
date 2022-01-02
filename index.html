@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="library.js" defer></script>
+</head>
+<body>
+    <div id="top">
+        <div id="nameoflibrary">My Library
+            <p id="description">
+                This is a library App. <br>
+                Click the button at the bottom right. <br>
+                Save your books and close the pop up. <br>
+                Mark each book as read or unread. <br>
+            </p>
+        </div>
+        <div id="welcome"><i class="fa fa-university"></i></div>
+    </div>
+    <div id="middle">
+        <button class="open-button" onclick="openForm()">ADD BOOKS +</button>
+
+        <div class="form-popup" id="myForm">
+        <div class="form-container">
+            <h1>Add to library</h1>
+
+            <label for="title"><b>title</b></label>
+            <input id="title" type="text" placeholder="TITLE" name="title" required>
+
+            <label for="author"><b>author</b></label>
+            <input id="author" type="text" placeholder="AUTHOR" name="author" required>
+
+            <label for="pages"><b>pages</b></label>
+            <input id="pages" type="text" placeholder="PAGES" name="pages" required>
+
+            <button id="addButton" type="submit" class="btn">ADD</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">CANCEL</button>
+        </div>
+        </div>
+    </div>
+    <div id="bottom">
+    </div>
+</body>
+</html>
