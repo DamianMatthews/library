@@ -1,14 +1,25 @@
 let myLibrary = [];
 
-function Book (title, author, pages, read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
-    this.info = function () {
-      return `${title} by ${author}, ${pages} pages`;
-      }
-  }  
+// function Book (title, author, pages, read) {
+//     this.title = title
+//     this.author = author
+//     this.pages = pages
+//     this.read = read
+//     this.info = function () {
+//       return `${title} by ${author}, ${pages} pages`;
+//       }
+//   }  
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title
+        this.author = author
+        this.pages = pages
+        this.read = read
+    }
+    info() {
+        return `${this.title} by ${this.author}, ${this.pages} pages`;
+    }
+}
  
 function addBookToLibrary () {
     const title = document.getElementById("title").value;
@@ -21,10 +32,13 @@ function addBookToLibrary () {
 const book1 = new Book("Bali","Jack Chiller","50","read")
 const book2 = new Book("Malta","Jackie Chan","250","read")
 
+// console.log(book1);
+
 const addButton = document.getElementById("addButton");
 addButton.addEventListener("click", function () {
     myLibrary.push(addBookToLibrary()), 
-    showBooks()
+    showBooks(), 
+    closeForm()
 });
 
 // myLibrary.push(book1);
